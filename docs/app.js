@@ -297,7 +297,8 @@ function recalc() {
   }
 
   if (errors.length > 0 || !pricingData) {
-    errorsEl.textContent = errors.join(' ');
+    errorsEl.textContent =
+      'Enter text de produce (leave empty if no text), width and height, and choose options as needed';
     updateOutputs(0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
