@@ -266,6 +266,15 @@ function getTier(heightCm) {
   });
 }
 
+function getSqmTierForSmallHeight() {
+  if (!pricingData) return null;
+  return (
+    pricingData.letters.find(
+      (tier) => tier.unit === 'sq.m' && tier.minCm === 20 && tier.maxCm === 25
+    ) || pricingData.letters.find((tier) => tier.unit === 'sq.m') || null
+  );
+}
+
 function recalc() {
   errorsEl.textContent = '';
 
@@ -286,9 +295,6 @@ function recalc() {
   if (letterCountEl) {
     letterCountEl.textContent = `Letters: ${letterCount}`;
   }
-  if (Number.isFinite(heightCm) && heightCm <= 20 && letterCount === 0) {
-    errors.push('Enter the text to produce.');
-  }
   if (!Number.isFinite(thicknessMm)) {
     errors.push('Select a thickness.');
   }
@@ -304,7 +310,7 @@ function recalc() {
     return;
   }
 
-  const tier = getTier(heightCm);
+  let tier = getTier(heightCm);
   if (!tier) {
     errorsEl.textContent = 'Height is outside pricing tiers.';
     updateOutputs(0, 0, 0, 0, 0);
@@ -312,9 +318,14 @@ function recalc() {
     return;
   }
 
+  const hasText = letterCount > 0;
+  if (!hasText && heightCm <= 20) {
+    tier = getSqmTierForSmallHeight() || tier;
+  }
+
   const areaM2 = (widthCm * heightCm) / 10000;
   let base = 0;
-  if (heightCm <= 20) {
+  if (hasText && heightCm <= 20) {
     const perLetter = heightCm * tier.price;
     base = perLetter * letterCount;
   } else {
