@@ -1,4 +1,5 @@
 const referenceSelect = document.getElementById('reference');
+const textInput = document.getElementById('text-input');
 const widthInput = document.getElementById('width');
 const heightInput = document.getElementById('height');
 const thicknessSelect = document.getElementById('thickness');
@@ -267,6 +268,7 @@ function getTier(heightCm) {
 function recalc() {
   errorsEl.textContent = '';
 
+  const textValue = textInput.value.trim();
   const widthCm = Number.parseFloat(widthInput.value);
   const heightCm = Number.parseFloat(heightInput.value);
   const thicknessMm = Number.parseInt(thicknessSelect.value, 10);
@@ -278,6 +280,9 @@ function recalc() {
   }
   if (!Number.isFinite(heightCm) || heightCm <= 0) {
     errors.push('Enter a valid height.');
+  }
+  if (Number.isFinite(heightCm) && heightCm <= 20 && textValue.length === 0) {
+    errors.push('Enter the text to produce.');
   }
   if (!Number.isFinite(thicknessMm)) {
     errors.push('Select a thickness.');
@@ -302,7 +307,13 @@ function recalc() {
   }
 
   const areaM2 = (widthCm * heightCm) / 10000;
-  const base = tier.unit === 'cm' ? heightCm * tier.price : areaM2 * tier.price;
+  let base = 0;
+  if (tier.unit === 'cm') {
+    const letterCount = textValue.replace(/\s+/g, '').length || 0;
+    base = heightCm * tier.price * letterCount;
+  } else {
+    base = areaM2 * tier.price;
+  }
 
   const thicknessOption = pricingData.thicknessOptions.find(
     (option) => option.mm === thicknessMm
@@ -337,7 +348,7 @@ referenceSelect.addEventListener('change', (event) => {
   loadPricing(event.target.value);
 });
 
-[widthInput, heightInput, thicknessSelect, finishSelect].forEach((el) => {
+[textInput, widthInput, heightInput, thicknessSelect, finishSelect].forEach((el) => {
   el.addEventListener('input', recalc);
   el.addEventListener('change', recalc);
 });
