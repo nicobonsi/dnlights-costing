@@ -298,7 +298,7 @@ function recalc() {
 
   if (errors.length > 0 || !pricingData) {
     errorsEl.textContent =
-      'Enter text de produce (leave empty if no text), width and height, and choose options as needed';
+      'Enter text de produce (leave empty if no text), width and height, and choose finish as needed';
     updateOutputs(0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
