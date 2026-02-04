@@ -283,7 +283,9 @@ function recalc() {
     errors.push('Enter a valid height.');
   }
   const letterCount = textValue.replace(/\s+/g, '').length || 0;
-  letterCountEl.textContent = `Letters: ${letterCount}`;
+  if (letterCountEl) {
+    letterCountEl.textContent = `Letters: ${letterCount}`;
+  }
   if (Number.isFinite(heightCm) && heightCm <= 20 && letterCount === 0) {
     errors.push('Enter the text to produce.');
   }
