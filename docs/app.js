@@ -5,6 +5,7 @@ const heightInput = document.getElementById('height');
 const thicknessSelect = document.getElementById('thickness');
 const finishSelect = document.getElementById('finish');
 const errorsEl = document.getElementById('errors');
+const letterCountEl = document.getElementById('letter-count');
 
 const baseCostEl = document.getElementById('base-cost');
 const thicknessSurchargeEl = document.getElementById('thickness-surcharge');
@@ -282,6 +283,7 @@ function recalc() {
     errors.push('Enter a valid height.');
   }
   const letterCount = textValue.replace(/\s+/g, '').length || 0;
+  letterCountEl.textContent = `Letters: ${letterCount}`;
   if (Number.isFinite(heightCm) && heightCm <= 20 && letterCount === 0) {
     errors.push('Enter the text to produce.');
   }

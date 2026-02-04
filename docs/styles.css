@@ -106,6 +106,12 @@ select:focus {
   font-size: 0.95rem;
 }
 
+.helper {
+  margin: -6px 0 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .results-header {
   display: flex;
   align-items: center;
