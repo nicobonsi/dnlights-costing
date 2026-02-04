@@ -281,7 +281,8 @@ function recalc() {
   if (!Number.isFinite(heightCm) || heightCm <= 0) {
     errors.push('Enter a valid height.');
   }
-  if (Number.isFinite(heightCm) && heightCm <= 20 && textValue.length === 0) {
+  const letterCount = textValue.replace(/\s+/g, '').length || 0;
+  if (Number.isFinite(heightCm) && heightCm <= 20 && letterCount === 0) {
     errors.push('Enter the text to produce.');
   }
   if (!Number.isFinite(thicknessMm)) {
@@ -308,9 +309,9 @@ function recalc() {
 
   const areaM2 = (widthCm * heightCm) / 10000;
   let base = 0;
-  if (tier.unit === 'cm') {
-    const letterCount = textValue.replace(/\s+/g, '').length || 0;
-    base = heightCm * tier.price * letterCount;
+  if (heightCm <= 20) {
+    const perLetter = heightCm * tier.price;
+    base = perLetter * letterCount;
   } else {
     base = areaM2 * tier.price;
   }
