@@ -1,0 +1,6458 @@
+{
+  "source": "2026 production price lumi letters.xlsx",
+  "updatedDate": "2026-02-03",
+  "references": [
+    {
+      "reference": "A001",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.5,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.9,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1150.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1120.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1090.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1060.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1030.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1000.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 970.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.1
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.2
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.3
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A002",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.25,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.65,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.87,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.09,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1265.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1232.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1199.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1166.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1133.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 1067.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.08
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.16
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A003",
+      "baseVariants": [
+        {
+          "id": "mm_15",
+          "label": "15 mm",
+          "thicknessMm": 15,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 6.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.17,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.33,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.52,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 905.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 785.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 713.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 648.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 587.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 548.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 522.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 6.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.26,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.44,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.67,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 990.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 870.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 801.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 737.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 669.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 630.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 608.7,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_25",
+          "label": "25 mm",
+          "thicknessMm": 25,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.35,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.54,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.81,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1076.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 954.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 889.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 826.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 751.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 713.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 695.4,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.42,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.62,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.9,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1002.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 934.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 867.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 789.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 748.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 730.2,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "variant",
+      "thicknessSurcharges": [],
+      "colorSurcharges": [
+        {
+          "id": "default",
+          "label": "Default",
+          "pct": 0.0
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A004",
+      "baseVariants": [
+        {
+          "id": "mm_15",
+          "label": "15 mm",
+          "thicknessMm": 15,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 6.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.17,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.33,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.52,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 905.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 785.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 713.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 648.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 587.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 548.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 522.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 6.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.26,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.44,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.67,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 990.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 870.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 801.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 737.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 669.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 630.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 608.7,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_25",
+          "label": "25 mm",
+          "thicknessMm": 25,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.35,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.54,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.81,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1076.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 954.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 889.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 826.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 751.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 713.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 695.4,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.42,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.62,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.9,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1002.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 934.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 867.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 789.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 748.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 730.2,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "variant",
+      "thicknessSurcharges": [],
+      "colorSurcharges": [
+        {
+          "id": "default",
+          "label": "Default",
+          "pct": 0.0
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A005",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.94,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.28,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1356.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1202.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1121.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1042.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 947.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 899.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 876.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "pct": -0.05
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.06
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.12
+        },
+        {
+          "id": "mm_45",
+          "label": "45 mm",
+          "thicknessMm": 45,
+          "pct": 0.18
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A006",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.94,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.28,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1356.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1202.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1121.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1042.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 947.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 899.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 876.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "pct": -0.05
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.06
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.12
+        },
+        {
+          "id": "mm_45",
+          "label": "45 mm",
+          "thicknessMm": 45,
+          "pct": 0.18
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A007",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.25,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.65,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.87,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.09,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1265.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1232.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1199.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1166.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1133.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 1067.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.08
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.16
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A008",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.25,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.65,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.87,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.09,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1265.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1232.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1199.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1166.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1133.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 1067.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.08
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.16
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A009",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 7.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.5,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 1.9,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1150.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1120.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1090.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1060.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1030.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1000.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 970.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.1
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.2
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.3
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A010",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.94,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.28,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1356.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1202.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1121.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1042.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 947.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 899.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 876.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "pct": -0.05
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.06
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.12
+        },
+        {
+          "id": "mm_45",
+          "label": "45 mm",
+          "thicknessMm": 45,
+          "pct": 0.18
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A011",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.25,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.65,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.87,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.09,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1265.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1232.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1199.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1166.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 1133.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 1100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 1067.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.08
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.16
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    },
+    {
+      "reference": "A012",
+      "baseVariants": [
+        {
+          "id": "standard",
+          "label": "Standard",
+          "thicknessMm": null,
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 8.5,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "cm"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 1.94,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 2.28,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 1356.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 1202.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 1121.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 1042.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 947.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 899.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 876.0,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "thicknessMode": "surcharge",
+      "thicknessSurcharges": [
+        {
+          "id": "mm_20",
+          "label": "20 mm",
+          "thicknessMm": 20,
+          "pct": -0.05
+        },
+        {
+          "id": "mm_30",
+          "label": "30 mm",
+          "thicknessMm": 30,
+          "pct": 0.0
+        },
+        {
+          "id": "mm_35",
+          "label": "35 mm",
+          "thicknessMm": 35,
+          "pct": 0.06
+        },
+        {
+          "id": "mm_40",
+          "label": "40 mm",
+          "thicknessMm": 40,
+          "pct": 0.12
+        },
+        {
+          "id": "mm_45",
+          "label": "45 mm",
+          "thicknessMm": 45,
+          "pct": 0.18
+        },
+        {
+          "id": "mm_50",
+          "label": "50 mm",
+          "thicknessMm": 50,
+          "pct": 0.24
+        }
+      ],
+      "colorSurcharges": [
+        {
+          "id": "opal_white",
+          "label": "Opal white",
+          "pct": 0.0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
+        }
+      ],
+      "finishOptions": [
+        {
+          "id": "avery_4500",
+          "label": "Avery 4500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.119,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.133,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 80.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 78.4,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 76.3,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 74.2,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 72.1,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 70.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 67.9,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "avery_5500",
+          "label": "Avery 5500",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3630",
+          "label": "3M 3630",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 1.7,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.17,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.19,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 115.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 112.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 109.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 106.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 103.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 100.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 97.0,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "3m_3635",
+          "label": "3M 3635",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 2.2,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 0.221,
+              "unit": "cm"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 0.247,
+              "unit": "cm"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        },
+        {
+          "id": "uv_printing",
+          "label": "UV Printing",
+          "tiers": [
+            {
+              "label": "0-5cm",
+              "minCm": 0.0,
+              "maxCm": 5.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "5-10cm",
+              "minCm": 5.0,
+              "maxCm": 10.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "10-15cm",
+              "minCm": 10.0,
+              "maxCm": 15.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "15-20cm",
+              "minCm": 15.0,
+              "maxCm": 20.0,
+              "price": 5.0,
+              "unit": "pcs"
+            },
+            {
+              "label": "20-25cm",
+              "minCm": 20.0,
+              "maxCm": 25.0,
+              "price": 149.5,
+              "unit": "sq.m"
+            },
+            {
+              "label": "25-30cm",
+              "minCm": 25.0,
+              "maxCm": 30.0,
+              "price": 145.6,
+              "unit": "sq.m"
+            },
+            {
+              "label": "30-35cm",
+              "minCm": 30.0,
+              "maxCm": 35.0,
+              "price": 141.7,
+              "unit": "sq.m"
+            },
+            {
+              "label": "35-40cm",
+              "minCm": 35.0,
+              "maxCm": 40.0,
+              "price": 137.8,
+              "unit": "sq.m"
+            },
+            {
+              "label": "40-45cm",
+              "minCm": 40.0,
+              "maxCm": 45.0,
+              "price": 133.9,
+              "unit": "sq.m"
+            },
+            {
+              "label": "45-50cm",
+              "minCm": 45.0,
+              "maxCm": 50.0,
+              "price": 130.0,
+              "unit": "sq.m"
+            },
+            {
+              "label": "\uff1e50cm",
+              "minCm": 50.0,
+              "maxCm": null,
+              "price": 126.1,
+              "unit": "sq.m"
+            }
+          ]
+        }
+      ],
+      "packing": {
+        "carton": {
+          "price": 40.0,
+          "unit": "sq.m",
+          "minimum": 15.0
+        }
+      }
+    }
+  ]
+}
