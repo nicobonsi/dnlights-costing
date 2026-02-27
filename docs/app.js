@@ -146,19 +146,24 @@ function hydrateSelectorsForReference(referenceData) {
     thicknessSelect.value = preferred ? preferred.id : (thicknessItems[0]?.value || '');
   }
 
-  const colorItems = referenceData.colorSurcharges.map((entry) => ({
+  const acrylicOptions = referenceData.finishes?.acrylicColorOptions || referenceData.colorSurcharges || [];
+  const colorItems = acrylicOptions.map((entry) => ({
     value: entry.id,
     label: `${entry.label} (${pctLabel(entry.pct)})`,
   }));
   buildDropdown(colorSelect, colorItems);
 
-  const defaultColor = referenceData.colorSurcharges.find((entry) => entry.pct === 0);
+  const defaultColor = acrylicOptions.find((entry) => entry.pct === 0);
   colorSelect.value = defaultColor ? defaultColor.id : (colorItems[0]?.value || '');
 
-  const finishItems = [{ value: 'none', label: 'None (0)' }];
-  referenceData.finishOptions.forEach((option) => {
-    finishItems.push({ value: option.id, label: option.label });
-  });
+  const vinylOptions = referenceData.finishes?.vinylPrintOptions || [
+    { id: 'none', label: 'None (0)', type: 'none' },
+    ...(referenceData.finishOptions || []).map((option) => ({ ...option, type: 'tiered' })),
+  ];
+  const finishItems = vinylOptions.map((option) => ({
+    value: option.id,
+    label: option.label,
+  }));
   buildDropdown(finishSelect, finishItems);
   finishSelect.value = 'none';
 }
@@ -219,7 +224,8 @@ function recalc() {
     thicknessPct = selectedThickness ? selectedThickness.pct : 0;
   }
 
-  const selectedColor = activeReference.colorSurcharges.find(
+  const acrylicOptions = activeReference.finishes?.acrylicColorOptions || activeReference.colorSurcharges || [];
+  const selectedColor = acrylicOptions.find(
     (entry) => entry.id === colorSelect.value
   );
   const colorPct = selectedColor ? selectedColor.pct : 0;
@@ -229,7 +235,8 @@ function recalc() {
 
   let finishCost = 0;
   if (finishSelect.value !== 'none') {
-    const finish = activeReference.finishOptions.find((entry) => entry.id === finishSelect.value);
+    const vinylOptions = activeReference.finishes?.vinylPrintOptions || activeReference.finishOptions || [];
+    const finish = vinylOptions.find((entry) => entry.id === finishSelect.value);
     if (finish) {
       const finishTier = (hasText || heightCm > 20)
         ? findTierByHeight(finish.tiers, heightCm)
