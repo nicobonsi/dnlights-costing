@@ -2332,9 +2332,14 @@
       "thicknessSurcharges": [],
       "colorSurcharges": [
         {
-          "id": "default",
-          "label": "Default",
+          "id": "opal_white",
+          "label": "Opal white",
           "pct": 0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
         }
       ],
       "finishOptions": [
@@ -2432,9 +2437,14 @@
       "finishes": {
         "acrylicColorOptions": [
           {
-            "id": "default",
-            "label": "Default",
+            "id": "opal_white",
+            "label": "Opal white",
             "pct": 0
+          },
+          {
+            "id": "other_colors",
+            "label": "Other colors",
+            "pct": 0.13
           }
         ],
         "vinylPrintOptions": [
@@ -2874,9 +2884,14 @@
       "thicknessSurcharges": [],
       "colorSurcharges": [
         {
-          "id": "default",
-          "label": "Default",
+          "id": "opal_white",
+          "label": "Opal white",
           "pct": 0
+        },
+        {
+          "id": "other_colors",
+          "label": "Other colors",
+          "pct": 0.13
         }
       ],
       "finishOptions": [
@@ -2974,9 +2989,14 @@
       "finishes": {
         "acrylicColorOptions": [
           {
-            "id": "default",
-            "label": "Default",
+            "id": "opal_white",
+            "label": "Opal white",
             "pct": 0
+          },
+          {
+            "id": "other_colors",
+            "label": "Other colors",
+            "pct": 0.13
           }
         ],
         "vinylPrintOptions": [
