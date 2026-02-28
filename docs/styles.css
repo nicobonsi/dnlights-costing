@@ -102,6 +102,7 @@ select:focus {
 
 .errors {
   min-height: 20px;
+  margin: 4px 0 14px;
   color: #b91c1c;
   font-size: 0.95rem;
 }
