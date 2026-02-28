@@ -14,6 +14,7 @@ const thicknessSurchargeEl = document.getElementById('thickness-surcharge');
 const colorSurchargeEl = document.getElementById('color-surcharge');
 const finishSurchargeEl = document.getElementById('finish-surcharge');
 const packingFeeEl = document.getElementById('packing-fee');
+const powerSuppliesEl = document.getElementById('power-supplies');
 const expressDeliveryEl = document.getElementById('express-delivery');
 const totalEl = document.getElementById('total');
 const roundedTotalEl = document.getElementById('rounded-total');
@@ -134,12 +135,30 @@ function estimateExpressDelivery(orderSubtotal) {
   return Math.min(maxExpress, roundToNearestStep(raw, 5));
 }
 
+function estimatePowerSupplies(orderSubtotal, areaM2) {
+  // 2025 invoice pattern:
+  // - XLG-75W-12V appears most often at ~$23-25
+  // - XLG-150W-12V is commonly billed at $30
+  // - XLG-200W-12V appears at $35 on larger loads
+  let unitPrice = 23;
+
+  if (areaM2 > 2.2 || orderSubtotal > 1800) {
+    unitPrice = 35;
+  } else if (areaM2 > 0.9 || orderSubtotal > 600) {
+    unitPrice = 30;
+  }
+
+  const quantity = Math.max(1, Math.ceil(areaM2 / 2.2));
+  return unitPrice * quantity;
+}
+
 function updateOutputs(
   base,
   thicknessSurcharge,
   colorSurcharge,
   finishCost,
   packingFee,
+  powerSupplies,
   expressDelivery,
   total
 ) {
@@ -148,6 +167,7 @@ function updateOutputs(
   colorSurchargeEl.textContent = formatMoney(colorSurcharge);
   finishSurchargeEl.textContent = formatMoney(finishCost);
   packingFeeEl.textContent = formatMoney(packingFee);
+  powerSuppliesEl.textContent = formatMoney(powerSupplies);
   expressDeliveryEl.textContent = formatMoney(expressDelivery);
   totalEl.textContent = formatMoney(total);
   roundedTotalEl.textContent = formatRounded(total);
@@ -215,7 +235,7 @@ function recalc() {
   letterCountEl.textContent = `Letters: ${letterCount}`;
 
   if (!activeReference) {
-    updateOutputs(0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -223,7 +243,7 @@ function recalc() {
   if (!Number.isFinite(widthCm) || widthCm <= 0 || !Number.isFinite(heightCm) || heightCm <= 0) {
     errorsEl.textContent =
       'Enter text de produce (leave empty if no text), product reference, width, height and choose options as needed';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -234,7 +254,7 @@ function recalc() {
   const baseVariant = getSelectedBaseVariant();
   if (!baseVariant) {
     errorsEl.textContent = 'No base pricing data for this reference.';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -245,7 +265,7 @@ function recalc() {
 
   if (!baseTier) {
     errorsEl.textContent = 'Height is outside pricing tiers.';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -283,14 +303,25 @@ function recalc() {
 
   const carton = activeReference.packing.carton;
   const packingFee = Math.max(areaM2 * carton.price, carton.minimum);
-  const orderSubtotal = base + thicknessSurcharge + colorSurcharge + finishCost + packingFee;
+  const subtotalBeforePower = base + thicknessSurcharge + colorSurcharge + finishCost + packingFee;
+  const powerSupplies = estimatePowerSupplies(subtotalBeforePower, areaM2);
+  const orderSubtotal = subtotalBeforePower + powerSupplies;
   const expressDelivery = deliveryModeSelect.value === 'express'
     ? estimateExpressDelivery(orderSubtotal)
     : 0;
 
   const total = orderSubtotal + expressDelivery;
 
-  updateOutputs(base, thicknessSurcharge, colorSurcharge, finishCost, packingFee, expressDelivery, total);
+  updateOutputs(
+    base,
+    thicknessSurcharge,
+    colorSurcharge,
+    finishCost,
+    packingFee,
+    powerSupplies,
+    expressDelivery,
+    total
+  );
   tierDisplayEl.textContent = `Tier: ${baseTier.label}`;
 }
 
