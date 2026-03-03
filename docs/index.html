@@ -28,7 +28,16 @@
       <main class="grid">
         <section class="panel form-panel">
           <h2>Inputs</h2>
+          <div id="errors" class="errors" aria-live="polite"></div>
           <form id="estimate-form" autocomplete="off">
+            <div class="field-row-inline">
+              <label class="field field-grow">
+                <span>Text to Produce</span>
+                <input id="text-input" type="text" placeholder="e.g., HUGO" />
+              </label>
+              <div class="helper helper-inline" id="letter-count">Letters: 0</div>
+            </div>
+
             <label class="field">
               <span>Product Reference</span>
               <select id="reference"></select>
@@ -51,11 +60,23 @@
             </label>
 
             <label class="field">
-              <span>Finish</span>
+              <span>Finish - Acrylic Color</span>
+              <select id="color"></select>
+            </label>
+
+            <label class="field">
+              <span>Finish - Vinyl / UV Printing</span>
               <select id="finish"></select>
             </label>
 
-            <div id="errors" class="errors" aria-live="polite"></div>
+            <label class="field">
+              <span>Delivery</span>
+              <select id="delivery-mode">
+                <option value="standard">Not included</option>
+                <option value="express">Express (estimated)</option>
+              </select>
+            </label>
+
           </form>
         </section>
 
@@ -74,12 +95,24 @@
               <span id="thickness-surcharge">$0.00</span>
             </div>
             <div class="row">
-              <span>Finish Surcharge</span>
+              <span>Finish (Acrylic Color)</span>
+              <span id="color-surcharge">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Finish (Vinyl / UV)</span>
               <span id="finish-surcharge">$0.00</span>
             </div>
             <div class="row">
               <span>Carton Fee</span>
               <span id="packing-fee">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Power Supplies (est.)</span>
+              <span id="power-supplies">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Express Delivery (est.)</span>
+              <span id="express-delivery">$0.00</span>
             </div>
             <div class="row total">
               <span>Total</span>
@@ -90,7 +123,7 @@
               <span id="rounded-total">$0</span>
             </div>
           </div>
-          <p class="note">All values are in USD. Rounded total is always rounded up.</p>
+          <p class="note">All values are in USD. Cost for reference only. Check with us to confirm details.</p>
         </section>
       </main>
     </div>
