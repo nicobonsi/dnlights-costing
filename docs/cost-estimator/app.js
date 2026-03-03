@@ -1,115 +1,27 @@
 const referenceSelect = document.getElementById('reference');
+const textInput = document.getElementById('text-input');
 const widthInput = document.getElementById('width');
 const heightInput = document.getElementById('height');
 const thicknessSelect = document.getElementById('thickness');
+const colorSelect = document.getElementById('color');
 const finishSelect = document.getElementById('finish');
+const deliveryModeSelect = document.getElementById('delivery-mode');
 const errorsEl = document.getElementById('errors');
+const letterCountEl = document.getElementById('letter-count');
 
 const baseCostEl = document.getElementById('base-cost');
 const thicknessSurchargeEl = document.getElementById('thickness-surcharge');
+const colorSurchargeEl = document.getElementById('color-surcharge');
 const finishSurchargeEl = document.getElementById('finish-surcharge');
 const packingFeeEl = document.getElementById('packing-fee');
+const powerSuppliesEl = document.getElementById('power-supplies');
+const expressDeliveryEl = document.getElementById('express-delivery');
 const totalEl = document.getElementById('total');
 const roundedTotalEl = document.getElementById('rounded-total');
 const tierDisplayEl = document.getElementById('tier-display');
 
-let pricingData = null;
-let manifest = [];
-
-const finishOrder = [
-  'Paint',
-  'Avery 4500',
-  'Avery 5500',
-  '3M 3630',
-  '3M 3635',
-  'UV Printing',
-];
-
-function parseCSV(text) {
-  const rows = [];
-  let row = [];
-  let cell = '';
-  let inQuotes = false;
-
-  for (let i = 0; i < text.length; i += 1) {
-    const char = text[i];
-    const next = text[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        cell += '"';
-        i += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === ',' && !inQuotes) {
-      row.push(cell);
-      cell = '';
-      continue;
-    }
-
-    if ((char === '\n' || char === '\r') && !inQuotes) {
-      if (char === '\r' && next === '\n') {
-        i += 1;
-      }
-      row.push(cell);
-      if (row.some((value) => value.trim() !== '')) {
-        rows.push(row);
-      }
-      row = [];
-      cell = '';
-      continue;
-    }
-
-    cell += char;
-  }
-
-  if (cell.length > 0 || row.length > 0) {
-    row.push(cell);
-    if (row.some((value) => value.trim() !== '')) {
-      rows.push(row);
-    }
-  }
-
-  return rows;
-}
-
-function parsePrice(value) {
-  if (!value) return 0;
-  const cleaned = value
-    .replace(/US\$/gi, '')
-    .replace(/¥/g, '')
-    .replace(/,/g, '')
-    .trim();
-  const parsed = Number.parseFloat(cleaned);
-  return Number.isNaN(parsed) ? 0 : parsed;
-}
-
-function parsePercent(value) {
-  if (!value) return 0;
-  const cleaned = value.replace('%', '').trim();
-  const parsed = Number.parseFloat(cleaned);
-  return Number.isNaN(parsed) ? 0 : parsed / 100;
-}
-
-function parseSize(value) {
-  if (!value) return null;
-  const trimmed = value.replace(/cm/gi, '').trim();
-  if (trimmed.includes('-')) {
-    const [min, max] = trimmed.split('-').map((part) => Number.parseFloat(part));
-    if (Number.isNaN(min) || Number.isNaN(max)) return null;
-    return { minCm: min, maxCm: max };
-  }
-  if (trimmed.startsWith('＞')) {
-    const min = Number.parseFloat(trimmed.replace('＞', '').trim());
-    if (Number.isNaN(min)) return null;
-    return { minCm: min, maxCm: null };
-  }
-  return null;
-}
+let pricingModel = null;
+let activeReference = null;
 
 function formatMoney(value) {
   return `$${value.toFixed(2)}`;
@@ -119,14 +31,8 @@ function formatRounded(value) {
   return `$${Math.ceil(value).toLocaleString('en-US')}`;
 }
 
-function buildDropdown(selectEl, options, placeholder) {
+function buildDropdown(selectEl, options) {
   selectEl.innerHTML = '';
-  if (placeholder) {
-    const option = document.createElement('option');
-    option.value = '';
-    option.textContent = placeholder;
-    selectEl.appendChild(option);
-  }
   options.forEach((option) => {
     const el = document.createElement('option');
     el.value = option.value;
@@ -135,211 +41,320 @@ function buildDropdown(selectEl, options, placeholder) {
   });
 }
 
-async function loadManifest() {
-  const response = await fetch('data/manifest.json');
-  manifest = await response.json();
-  referenceSelect.innerHTML = '';
-  manifest.forEach((item, index) => {
-    const option = document.createElement('option');
-    option.value = item.file;
-    option.textContent = item.label || item.reference || `Ref ${index + 1}`;
-    referenceSelect.appendChild(option);
-  });
-  if (manifest.length > 0) {
-    referenceSelect.value = manifest[0].file;
-    await loadPricing(manifest[0].file);
-  }
+function pctLabel(pct) {
+  const sign = pct > 0 ? '+' : '';
+  return `${sign}${(pct * 100).toFixed(0)}%`;
 }
 
-async function loadPricing(file) {
-  const response = await fetch(file);
-  const csvText = await response.text();
-  pricingData = parsePricing(csvText);
-  hydrateSelectors();
-  recalc();
+function findReference(referenceId) {
+  if (!pricingModel) return null;
+  return pricingModel.references.find((entry) => entry.reference === referenceId) || null;
 }
 
-function parsePricing(csvText) {
-  const rows = parseCSV(csvText).map((row) => row.map((cell) => cell.trim()));
-
-  const letters = [];
-  const thicknessOptions = [];
-  const finishOptions = new Map();
-  const packing = { price: 0, min: 0, unit: 'sq.m' };
-
-  let currentType = '';
-
-  rows.forEach((row) => {
-    const sizeCell = row[0];
-    const priceCell = row[1];
-    const unitCell = row[2];
-    const typeCell = row[4];
-    const optionCell = row[5];
-    const pctCell = row[6];
-    const packingType = row[8];
-    const packingPrice = row[9];
-    const packingUnit = row[10];
-    const packingMin = row[11];
-
-    if (sizeCell && (sizeCell.includes('cm') || sizeCell.includes('＞'))) {
-      const size = parseSize(sizeCell);
-      if (size) {
-        letters.push({
-          ...size,
-          price: parsePrice(priceCell),
-          unit: unitCell || '',
-          label: sizeCell,
-        });
-      }
-    }
-
-    if (typeCell) {
-      currentType = typeCell;
-    }
-
-    if (optionCell && pctCell) {
-      const pct = parsePercent(pctCell);
-      if (currentType.toLowerCase().includes('thinck')) {
-        const mmMatch = optionCell.match(/(\d+)\s*mm/i);
-        if (mmMatch) {
-          thicknessOptions.push({
-            mm: Number.parseInt(mmMatch[1], 10),
-            pct,
-          });
-        }
-      } else if (currentType.toLowerCase().includes('vinyl')) {
-        finishOptions.set(optionCell, pct);
-      } else if (currentType.toLowerCase().includes('printing')) {
-        finishOptions.set(optionCell, pct);
-      }
-    }
-
-    if (packingType && packingType.toLowerCase().includes('carton')) {
-      packing.price = parsePrice(packingPrice);
-      packing.min = parsePrice(packingMin);
-      packing.unit = packingUnit || 'sq.m';
-    }
-  });
-
-  thicknessOptions.sort((a, b) => a.mm - b.mm);
-
-  return {
-    letters,
-    thicknessOptions,
-    finishOptions,
-    packing,
-  };
-}
-
-function hydrateSelectors() {
-  if (!pricingData) return;
-
-  const thicknessItems = pricingData.thicknessOptions.map((option) => ({
-    value: option.mm,
-    label: `${option.mm} mm (+${(option.pct * 100).toFixed(0)}%)`,
-  }));
-
-  buildDropdown(thicknessSelect, thicknessItems, 'Select thickness');
-  thicknessSelect.value = '30';
-
-  const finishItems = finishOrder.map((label) => {
-    if (label === 'Paint') {
-      return { value: 'Paint', label: 'Paint (0%)' };
-    }
-    const pct = pricingData.finishOptions.get(label) || 0;
-    return { value: label, label: `${label} (+${(pct * 100).toFixed(0)}%)` };
-  });
-
-  buildDropdown(finishSelect, finishItems, 'Select finish');
-  finishSelect.value = 'Paint';
-}
-
-function getTier(heightCm) {
-  if (!pricingData) return null;
-  return pricingData.letters.find((tier) => {
+function findTierByHeight(tiers, heightCm) {
+  return tiers.find((tier) => {
     if (tier.maxCm === null) {
       return heightCm > tier.minCm;
     }
     return heightCm >= tier.minCm && heightCm <= tier.maxCm;
-  });
+  }) || null;
+}
+
+function findSqmTierFallback(tiers) {
+  return (
+    tiers.find((tier) => tier.unit === 'sq.m' && tier.minCm === 20 && tier.maxCm === 25) ||
+    tiers.find((tier) => tier.unit === 'sq.m') ||
+    null
+  );
+}
+
+function getSelectedBaseVariant() {
+  if (!activeReference) return null;
+
+  if (activeReference.thicknessMode === 'variant') {
+    const selectedId = thicknessSelect.value;
+    return (
+      activeReference.baseVariants.find((variant) => variant.id === selectedId) ||
+      activeReference.baseVariants[0] ||
+      null
+    );
+  }
+
+  return activeReference.baseVariants[0] || null;
+}
+
+function computeTierAmount(tier, heightCm, areaM2, letterCount, hasText) {
+  if (!tier) return 0;
+
+  if (hasText && heightCm <= 20) {
+    if (tier.unit === 'pcs') {
+      return tier.price * letterCount;
+    }
+    if (tier.unit === 'cm') {
+      return tier.price * heightCm * letterCount;
+    }
+  }
+
+  if (tier.unit === 'sq.m') {
+    return tier.price * areaM2;
+  }
+
+  if (tier.unit === 'cm') {
+    return tier.price * heightCm;
+  }
+
+  if (tier.unit === 'pcs') {
+    return tier.price;
+  }
+
+  return 0;
+}
+
+function roundToNearestStep(value, step) {
+  return Math.round(value / step) * step;
+}
+
+function estimateExpressDelivery(orderSubtotal) {
+  // Heuristic derived from 2025 factory invoice freight patterns:
+  // - tiny orders can be as low as $135
+  // - common express baseline clusters around $190
+  // - larger orders trend upward gradually
+  const tinyOrderThreshold = 150;
+  const tinyOrderExpress = 135;
+  const baselineSubtotal = 500;
+  const baselineExpress = 190;
+  const growthRate = 0.08;
+  const maxExpress = 1280;
+
+  if (orderSubtotal < tinyOrderThreshold) {
+    return tinyOrderExpress;
+  }
+
+  const extraSubtotal = Math.max(0, orderSubtotal - baselineSubtotal);
+  const raw = baselineExpress + (extraSubtotal * growthRate);
+  return Math.min(maxExpress, roundToNearestStep(raw, 5));
+}
+
+function estimatePowerSupplies(orderSubtotal, areaM2) {
+  // 2025 invoice pattern:
+  // - XLG-75W-12V appears most often at ~$23-25
+  // - XLG-150W-12V is commonly billed at $30
+  // - XLG-200W-12V appears at $35 on larger loads
+  let unitPrice = 23;
+
+  if (areaM2 > 2.2 || orderSubtotal > 1800) {
+    unitPrice = 35;
+  } else if (areaM2 > 0.9 || orderSubtotal > 600) {
+    unitPrice = 30;
+  }
+
+  const quantity = Math.max(1, Math.ceil(areaM2 / 2.2));
+  return unitPrice * quantity;
+}
+
+function updateOutputs(
+  base,
+  thicknessSurcharge,
+  colorSurcharge,
+  finishCost,
+  packingFee,
+  powerSupplies,
+  expressDelivery,
+  total
+) {
+  baseCostEl.textContent = formatMoney(base);
+  thicknessSurchargeEl.textContent = formatMoney(thicknessSurcharge);
+  colorSurchargeEl.textContent = formatMoney(colorSurcharge);
+  finishSurchargeEl.textContent = formatMoney(finishCost);
+  packingFeeEl.textContent = formatMoney(packingFee);
+  powerSuppliesEl.textContent = formatMoney(powerSupplies);
+  expressDeliveryEl.textContent = formatMoney(expressDelivery);
+  totalEl.textContent = formatMoney(total);
+  roundedTotalEl.textContent = formatRounded(total);
+}
+
+function hydrateSelectorsForReference(referenceData) {
+  const thicknessItems = [];
+
+  if (referenceData.thicknessMode === 'variant') {
+    referenceData.baseVariants.forEach((variant) => {
+      thicknessItems.push({
+        value: variant.id,
+        label: variant.label,
+      });
+    });
+  } else {
+    referenceData.thicknessSurcharges.forEach((option) => {
+      const suffix = option.thicknessMm ? `${option.thicknessMm} mm` : option.label;
+      thicknessItems.push({
+        value: option.id,
+        label: `${suffix} (${pctLabel(option.pct)})`,
+      });
+    });
+  }
+
+  buildDropdown(thicknessSelect, thicknessItems);
+
+  if (referenceData.thicknessMode === 'variant') {
+    thicknessSelect.value = thicknessItems[0]?.value || '';
+  } else {
+    const preferred = referenceData.thicknessSurcharges.find((entry) => entry.thicknessMm === 30);
+    thicknessSelect.value = preferred ? preferred.id : (thicknessItems[0]?.value || '');
+  }
+
+  const acrylicOptions = referenceData.finishes?.acrylicColorOptions || referenceData.colorSurcharges || [];
+  const colorItems = acrylicOptions.map((entry) => ({
+    value: entry.id,
+    label: `${entry.label} (${pctLabel(entry.pct)})`,
+  }));
+  buildDropdown(colorSelect, colorItems);
+
+  const defaultColor = acrylicOptions.find((entry) => entry.pct === 0);
+  colorSelect.value = defaultColor ? defaultColor.id : (colorItems[0]?.value || '');
+
+  const vinylOptions = referenceData.finishes?.vinylPrintOptions || [
+    { id: 'none', label: 'None (0)', type: 'none' },
+    ...(referenceData.finishOptions || []).map((option) => ({ ...option, type: 'tiered' })),
+  ];
+  const finishItems = vinylOptions.map((option) => ({
+    value: option.id,
+    label: option.label,
+  }));
+  buildDropdown(finishSelect, finishItems);
+  finishSelect.value = 'none';
 }
 
 function recalc() {
   errorsEl.textContent = '';
 
-  const widthCm = Number.parseFloat(widthInput.value);
-  const heightCm = Number.parseFloat(heightInput.value);
-  const thicknessMm = Number.parseInt(thicknessSelect.value, 10);
-  const finishLabel = finishSelect.value;
+  const textValue = textInput.value.trim();
+  const widthMm = Number.parseFloat(widthInput.value);
+  const heightMm = Number.parseFloat(heightInput.value);
+  const letterCount = textValue.replace(/\s+/g, '').length;
 
-  const errors = [];
-  if (!Number.isFinite(widthCm) || widthCm <= 0) {
-    errors.push('Enter a valid width.');
-  }
-  if (!Number.isFinite(heightCm) || heightCm <= 0) {
-    errors.push('Enter a valid height.');
-  }
-  if (!Number.isFinite(thicknessMm)) {
-    errors.push('Select a thickness.');
-  }
-  if (!finishLabel) {
-    errors.push('Select a finish.');
-  }
+  letterCountEl.textContent = `Letters: ${letterCount}`;
 
-  if (errors.length > 0 || !pricingData) {
-    errorsEl.textContent = errors.join(' ');
-    updateOutputs(0, 0, 0, 0, 0);
+  if (!activeReference) {
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
 
-  const tier = getTier(heightCm);
-  if (!tier) {
-    errorsEl.textContent = 'Height is outside pricing tiers.';
-    updateOutputs(0, 0, 0, 0, 0);
+  if (!Number.isFinite(widthMm) || widthMm <= 0 || !Number.isFinite(heightMm) || heightMm <= 0) {
+    errorsEl.textContent =
+      'Enter text de produce (leave empty if no text), product reference, width, height and choose options as needed';
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
 
+  const widthCm = widthMm / 10;
+  const heightCm = heightMm / 10;
+  const hasText = letterCount > 0;
   const areaM2 = (widthCm * heightCm) / 10000;
-  const base = tier.unit === 'cm' ? heightCm * tier.price : areaM2 * tier.price;
 
-  const thicknessOption = pricingData.thicknessOptions.find(
-    (option) => option.mm === thicknessMm
+  const baseVariant = getSelectedBaseVariant();
+  if (!baseVariant) {
+    errorsEl.textContent = 'No base pricing data for this reference.';
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    tierDisplayEl.textContent = 'Tier: —';
+    return;
+  }
+
+  const baseTier = (hasText || heightCm > 20)
+    ? findTierByHeight(baseVariant.tiers, heightCm)
+    : findSqmTierFallback(baseVariant.tiers);
+
+  if (!baseTier) {
+    errorsEl.textContent = 'Height is outside pricing tiers.';
+    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    tierDisplayEl.textContent = 'Tier: —';
+    return;
+  }
+
+  const base = computeTierAmount(baseTier, heightCm, areaM2, letterCount, hasText);
+
+  let thicknessPct = 0;
+  if (activeReference.thicknessMode === 'surcharge') {
+    const selectedThickness = activeReference.thicknessSurcharges.find(
+      (entry) => entry.id === thicknessSelect.value
+    );
+    thicknessPct = selectedThickness ? selectedThickness.pct : 0;
+  }
+
+  const acrylicOptions = activeReference.finishes?.acrylicColorOptions || activeReference.colorSurcharges || [];
+  const selectedColor = acrylicOptions.find(
+    (entry) => entry.id === colorSelect.value
   );
-  const thicknessPct = thicknessOption ? thicknessOption.pct : 0;
-
-  const finishPct = finishLabel === 'Paint'
-    ? 0
-    : pricingData.finishOptions.get(finishLabel) || 0;
+  const colorPct = selectedColor ? selectedColor.pct : 0;
 
   const thicknessSurcharge = base * thicknessPct;
-  const finishSurcharge = base * finishPct;
-  const subtotal = base + thicknessSurcharge + finishSurcharge;
+  const colorSurcharge = base * colorPct;
 
-  const packingFee = Math.max(areaM2 * pricingData.packing.price, pricingData.packing.min);
-  const total = subtotal + packingFee;
+  let finishCost = 0;
+  if (finishSelect.value !== 'none') {
+    const vinylOptions = activeReference.finishes?.vinylPrintOptions || activeReference.finishOptions || [];
+    const finish = vinylOptions.find((entry) => entry.id === finishSelect.value);
+    if (finish) {
+      const finishTier = (hasText || heightCm > 20)
+        ? findTierByHeight(finish.tiers, heightCm)
+        : findSqmTierFallback(finish.tiers);
+      finishCost = computeTierAmount(finishTier, heightCm, areaM2, letterCount, hasText);
+    }
+  }
 
-  updateOutputs(base, thicknessSurcharge, finishSurcharge, packingFee, total);
-  tierDisplayEl.textContent = `Tier: ${tier.label}`;
+  const carton = activeReference.packing.carton;
+  const packingFee = Math.max(areaM2 * carton.price, carton.minimum);
+  const subtotalBeforePower = base + thicknessSurcharge + colorSurcharge + finishCost + packingFee;
+  const powerSupplies = estimatePowerSupplies(subtotalBeforePower, areaM2);
+  const orderSubtotal = subtotalBeforePower + powerSupplies;
+  const expressDelivery = deliveryModeSelect.value === 'express'
+    ? estimateExpressDelivery(orderSubtotal)
+    : 0;
+
+  const total = orderSubtotal + expressDelivery;
+
+  updateOutputs(
+    base,
+    thicknessSurcharge,
+    colorSurcharge,
+    finishCost,
+    packingFee,
+    powerSupplies,
+    expressDelivery,
+    total
+  );
+  tierDisplayEl.textContent = `Tier: ${baseTier.label}`;
 }
 
-function updateOutputs(base, thicknessSurcharge, finishSurcharge, packingFee, total) {
-  baseCostEl.textContent = formatMoney(base);
-  thicknessSurchargeEl.textContent = formatMoney(thicknessSurcharge);
-  finishSurchargeEl.textContent = formatMoney(finishSurcharge);
-  packingFeeEl.textContent = formatMoney(packingFee);
-  totalEl.textContent = formatMoney(total);
-  roundedTotalEl.textContent = formatRounded(total);
+function onReferenceChange() {
+  activeReference = findReference(referenceSelect.value);
+  if (!activeReference) {
+    return;
+  }
+  hydrateSelectorsForReference(activeReference);
+  recalc();
 }
 
-referenceSelect.addEventListener('change', (event) => {
-  loadPricing(event.target.value);
-});
+async function init() {
+  const response = await fetch('data/pricing-models.json');
+  pricingModel = await response.json();
 
-[widthInput, heightInput, thicknessSelect, finishSelect].forEach((el) => {
+  const referenceItems = pricingModel.references.map((entry) => ({
+    value: entry.reference,
+    label: entry.reference,
+  }));
+  buildDropdown(referenceSelect, referenceItems);
+
+  referenceSelect.value = referenceItems[0]?.value || '';
+  onReferenceChange();
+}
+
+referenceSelect.addEventListener('change', onReferenceChange);
+[textInput, widthInput, heightInput, thicknessSelect, colorSelect, finishSelect].forEach((el) => {
   el.addEventListener('input', recalc);
   el.addEventListener('change', recalc);
 });
+deliveryModeSelect.addEventListener('change', recalc);
 
-loadManifest();
+init();

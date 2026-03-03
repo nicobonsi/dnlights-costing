@@ -41,7 +41,7 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 170px;
   height: auto;
   opacity: 0.9;
 }
@@ -102,8 +102,32 @@ select:focus {
 
 .errors {
   min-height: 20px;
+  margin: 0 0 18px;
   color: #b91c1c;
   font-size: 0.95rem;
+}
+
+.helper {
+  margin: -6px 0 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.field-row-inline {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.field-grow {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.helper-inline {
+  margin: 0 0 8px;
+  white-space: nowrap;
 }
 
 .results-header {
@@ -165,7 +189,7 @@ select:focus {
   }
 
   .logo {
-    width: 100px;
+    width: 135px;
   }
 }
 
