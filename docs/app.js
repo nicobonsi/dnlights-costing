@@ -5,7 +5,6 @@ const heightInput = document.getElementById('height');
 const thicknessSelect = document.getElementById('thickness');
 const colorSelect = document.getElementById('color');
 const finishSelect = document.getElementById('finish');
-const deliveryModeSelect = document.getElementById('delivery-mode');
 const errorsEl = document.getElementById('errors');
 const letterCountEl = document.getElementById('letter-count');
 
@@ -14,8 +13,6 @@ const thicknessSurchargeEl = document.getElementById('thickness-surcharge');
 const colorSurchargeEl = document.getElementById('color-surcharge');
 const finishSurchargeEl = document.getElementById('finish-surcharge');
 const packingFeeEl = document.getElementById('packing-fee');
-const powerSuppliesEl = document.getElementById('power-supplies');
-const expressDeliveryEl = document.getElementById('express-delivery');
 const totalEl = document.getElementById('total');
 const roundedTotalEl = document.getElementById('rounded-total');
 const tierDisplayEl = document.getElementById('tier-display');
@@ -110,65 +107,12 @@ function computeTierAmount(tier, heightCm, areaM2, letterCount, hasText) {
   return 0;
 }
 
-function roundToNearestStep(value, step) {
-  return Math.round(value / step) * step;
-}
-
-function estimateExpressDelivery(orderSubtotal) {
-  // Heuristic derived from 2025 factory invoice freight patterns:
-  // - tiny orders can be as low as $135
-  // - common express baseline clusters around $190
-  // - larger orders trend upward gradually
-  const tinyOrderThreshold = 150;
-  const tinyOrderExpress = 135;
-  const baselineSubtotal = 500;
-  const baselineExpress = 190;
-  const growthRate = 0.08;
-  const maxExpress = 1280;
-
-  if (orderSubtotal < tinyOrderThreshold) {
-    return tinyOrderExpress;
-  }
-
-  const extraSubtotal = Math.max(0, orderSubtotal - baselineSubtotal);
-  const raw = baselineExpress + (extraSubtotal * growthRate);
-  return Math.min(maxExpress, roundToNearestStep(raw, 5));
-}
-
-function estimatePowerSupplies(orderSubtotal, areaM2) {
-  // 2025 invoice pattern:
-  // - XLG-75W-12V appears most often at ~$23-25
-  // - XLG-150W-12V is commonly billed at $30
-  // - XLG-200W-12V appears at $35 on larger loads
-  let unitPrice = 23;
-
-  if (areaM2 > 2.2 || orderSubtotal > 1800) {
-    unitPrice = 35;
-  } else if (areaM2 > 0.9 || orderSubtotal > 600) {
-    unitPrice = 30;
-  }
-
-  const quantity = Math.max(1, Math.ceil(areaM2 / 2.2));
-  return unitPrice * quantity;
-}
-
-function updateOutputs(
-  base,
-  thicknessSurcharge,
-  colorSurcharge,
-  finishCost,
-  packingFee,
-  powerSupplies,
-  expressDelivery,
-  total
-) {
+function updateOutputs(base, thicknessSurcharge, colorSurcharge, finishCost, packingFee, total) {
   baseCostEl.textContent = formatMoney(base);
   thicknessSurchargeEl.textContent = formatMoney(thicknessSurcharge);
   colorSurchargeEl.textContent = formatMoney(colorSurcharge);
   finishSurchargeEl.textContent = formatMoney(finishCost);
   packingFeeEl.textContent = formatMoney(packingFee);
-  powerSuppliesEl.textContent = formatMoney(powerSupplies);
-  expressDeliveryEl.textContent = formatMoney(expressDelivery);
   totalEl.textContent = formatMoney(total);
   roundedTotalEl.textContent = formatRounded(total);
 }
@@ -235,7 +179,7 @@ function recalc() {
   letterCountEl.textContent = `Letters: ${letterCount}`;
 
   if (!activeReference) {
-    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -243,7 +187,7 @@ function recalc() {
   if (!Number.isFinite(widthMm) || widthMm <= 0 || !Number.isFinite(heightMm) || heightMm <= 0) {
     errorsEl.textContent =
       'Enter text de produce (leave empty if no text), product reference, width, height and choose options as needed';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -256,7 +200,7 @@ function recalc() {
   const baseVariant = getSelectedBaseVariant();
   if (!baseVariant) {
     errorsEl.textContent = 'No base pricing data for this reference.';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -267,7 +211,7 @@ function recalc() {
 
   if (!baseTier) {
     errorsEl.textContent = 'Height is outside pricing tiers.';
-    updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
+    updateOutputs(0, 0, 0, 0, 0, 0);
     tierDisplayEl.textContent = 'Tier: —';
     return;
   }
@@ -305,25 +249,9 @@ function recalc() {
 
   const carton = activeReference.packing.carton;
   const packingFee = Math.max(areaM2 * carton.price, carton.minimum);
-  const subtotalBeforePower = base + thicknessSurcharge + colorSurcharge + finishCost + packingFee;
-  const powerSupplies = estimatePowerSupplies(subtotalBeforePower, areaM2);
-  const orderSubtotal = subtotalBeforePower + powerSupplies;
-  const expressDelivery = deliveryModeSelect.value === 'express'
-    ? estimateExpressDelivery(orderSubtotal)
-    : 0;
+  const total = base + thicknessSurcharge + colorSurcharge + finishCost + packingFee;
 
-  const total = orderSubtotal + expressDelivery;
-
-  updateOutputs(
-    base,
-    thicknessSurcharge,
-    colorSurcharge,
-    finishCost,
-    packingFee,
-    powerSupplies,
-    expressDelivery,
-    total
-  );
+  updateOutputs(base, thicknessSurcharge, colorSurcharge, finishCost, packingFee, total);
   tierDisplayEl.textContent = `Tier: ${baseTier.label}`;
 }
 
@@ -355,6 +283,5 @@ referenceSelect.addEventListener('change', onReferenceChange);
   el.addEventListener('input', recalc);
   el.addEventListener('change', recalc);
 });
-deliveryModeSelect.addEventListener('change', recalc);
 
 init();
