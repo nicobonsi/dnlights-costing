@@ -228,8 +228,8 @@ function recalc() {
   errorsEl.textContent = '';
 
   const textValue = textInput.value.trim();
-  const widthCm = Number.parseFloat(widthInput.value);
-  const heightCm = Number.parseFloat(heightInput.value);
+  const widthMm = Number.parseFloat(widthInput.value);
+  const heightMm = Number.parseFloat(heightInput.value);
   const letterCount = textValue.replace(/\s+/g, '').length;
 
   letterCountEl.textContent = `Letters: ${letterCount}`;
@@ -240,7 +240,7 @@ function recalc() {
     return;
   }
 
-  if (!Number.isFinite(widthCm) || widthCm <= 0 || !Number.isFinite(heightCm) || heightCm <= 0) {
+  if (!Number.isFinite(widthMm) || widthMm <= 0 || !Number.isFinite(heightMm) || heightMm <= 0) {
     errorsEl.textContent =
       'Enter text de produce (leave empty if no text), product reference, width, height and choose options as needed';
     updateOutputs(0, 0, 0, 0, 0, 0, 0, 0);
@@ -248,6 +248,8 @@ function recalc() {
     return;
   }
 
+  const widthCm = widthMm / 10;
+  const heightCm = heightMm / 10;
   const hasText = letterCount > 0;
   const areaM2 = (widthCm * heightCm) / 10000;
 
