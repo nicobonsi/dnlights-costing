@@ -1,16 +1,100 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DNLights Costing</title>
-  <meta http-equiv="refresh" content="0; url=./cost-estimator/" />
-  <script>
-    window.location.replace('./cost-estimator/');
-  </script>
-</head>
-<body>
-  <p>Redirecting to the app...</p>
-  <p>If you are not redirected, <a href="./cost-estimator/">open the cost estimator</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DNLights Production Cost Estimator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top-bar">
+        <div class="title-block">
+          <h1>PRODUCTION COST ESTIMATOR</h1>
+        </div>
+        <img
+          class="logo"
+          src="assets/dnlights-logo.webp"
+          alt="DNLights logo"
+        />
+      </header>
+
+      <main class="grid">
+        <section class="panel form-panel">
+          <h2>Inputs</h2>
+          <form id="estimate-form" autocomplete="off">
+            <label class="field">
+              <span>Product Reference</span>
+              <select id="reference"></select>
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Width (cm)</span>
+                <input id="width" type="number" min="0" step="0.1" placeholder="e.g., 120" />
+              </label>
+              <label class="field">
+                <span>Height (cm)</span>
+                <input id="height" type="number" min="0" step="0.1" placeholder="e.g., 30" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Thickness (mm)</span>
+              <select id="thickness"></select>
+            </label>
+
+            <label class="field">
+              <span>Finish</span>
+              <select id="finish"></select>
+            </label>
+
+            <div id="errors" class="errors" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="results-header">
+            <h2>Estimate</h2>
+            <div class="badge" id="tier-display">Tier: —</div>
+          </div>
+          <div class="breakdown">
+            <div class="row">
+              <span>Base Cost</span>
+              <span id="base-cost">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Thickness Surcharge</span>
+              <span id="thickness-surcharge">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Finish Surcharge</span>
+              <span id="finish-surcharge">$0.00</span>
+            </div>
+            <div class="row">
+              <span>Carton Fee</span>
+              <span id="packing-fee">$0.00</span>
+            </div>
+            <div class="row total">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+            <div class="row rounded">
+              <span>Rounded Total</span>
+              <span id="rounded-total">$0</span>
+            </div>
+          </div>
+          <p class="note">All values are in USD. Rounded total is always rounded up.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
